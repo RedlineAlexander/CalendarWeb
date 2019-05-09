@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar Redlina</title>
+    <style>
+        .buttons a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 0.5em;
+            padding-top: .6em;
+            padding-bottom: .6em;
+            color: #fff;
+
+        }
+        table{
+            border: 1px solid #69c;
+            border-collapse: separate;
+            empty-cells: hide;
+        }
+        th,td{border: 2px solid #69c;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    function getDateTime() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var day = now.getDate();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        if (day.toString().length == 1) {
+            day = '0' + day;
+        }
+        if (hour.toString().length == 1) {
+            hour = '0' + hour;
+
+        }
+        if (minute.toString().length == 1) {
+            minute = '0' + minute;
+        }
+        if (second.toString().length == 1) {
+            second = '0' + second;
+
+        }
+        var dateTime = year + '/' + month + '/' + day + '<br>'+'' + hour + ':' + minute + ':' + second;
+        return dateTime;
+    }
+
+        setInterval(function () {
+            currentTime = getDateTime();
+            document.getElementById("digital-clock").innerHTML = currentTime;
+        }, 1000);
+
+function createCalendar(id, year, month) {
+
+
+}
+
+function btnClick() {
+    var Txt1 = "";
+    var Txt2 = "";
+    Txt1 = document.TestCalendar.bt.value;
+    Txt2 = document.TestCalendar.bt.name;
+    document.getElementById('day1').innerHTML="<HR>"+
+            "Сегодня никаких событий и дел нету" + Txt1.bold() +
+            "Щелкните другие числа" + Txt2.bold() + "<HR>";
+
+}
+
+
+</script>
+
+
+<h1>Апрель 2019</h1>
+<div id="day1"></div>
+<form name="TestCalendar">
+    <input type="button" name="buttondata" value="1"
+           onclick="btnClick();">
+</form>
+
+
+
+
+
+<div id="digital-clock" align="center"></div>
+<div id="cal"  class="table" align="center">
+<div class="tr">
+
+    <div id="first" class="td">
+
+    </div>
+    <div id="second" class="td">
+
+    </div>
+    <div id="third" class="td">
+
+    </div>
+    <div id="fourth" class="td">
+
+    </div>
+
+        <div id="fifth" class="td">
+
+        </div>
+
+    <div id="sixth" class="td">
+
+    </div>
+
+    <div id="seventh" class="td">
+
+    </div>
+
+</div>
+</div>
+
+<button id="color">Кликни на дату числа</button>
+<style>
+    #color{
+        transition-property: background-color;
+        transition-duration: 3s;
+    }
+
+</style>
+<script>
+    color.onclick = function () {
+        this.style.backgroundColor = 'red';
+    }
+</script>
+
+<table border="10" align="center" background="red">
+    <tr align="center">
+        <th align="center">май 2019</th>
+    </tr>
+    <tr>
+    <th>Понедельник</th>
+    <th>Вторник</th>
+    <th>Среда</th>
+    <th>Четверг</th>
+    <th>Пятница</th>
+    <th>Суббота</th>
+    <th>Восскресенье</th>
+    </tr>
+
+
+    <tr>
+    <td>29</td><td>30</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+    </tr>
+    <tr>
+        <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+    </tr>
+    <tr>
+        <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+    </tr>
+    <tr>
+        <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+    </tr>
+    <tr>
+        <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>1</td><td>2</td>
+    </tr>
+    <tr>
+        <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+    </tr>
+</table>
+
+
+
+<table border="10" align="center" background="red">
+    <tr align="center">
+        <th align="center">июнь 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+
+
+    <tr>
+        <td>29</td><td>30</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+    </tr>
+    <tr>
+        <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+    </tr>
+    <tr>
+        <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+    </tr>
+    <tr>
+        <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+    </tr>
+    <tr>
+        <td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>1</td><td>2</td>
+    </tr>
+    <tr>
+        <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+    </tr>
+</table>
+
+<form id="formcalendar">
+    <div class="div-table">
+        <div class="div-table-row">
+            <div class="div-table-col" align="center">Понедельник</div>
+            <div class="div-table-col">Понедельник</div>
+            <div class="div-table-col">Вторник</div>
+            <div class="div=table-col">Среда</div>
+            <div class="div-table-col">Четверг</div>
+            <div class="div=table-col">Пятница</div>
+            <div class="div-table-col">Суббота</div>
+            <div class="div=table-col">Восскресенье</div>
+        </div>
+        <div class="div-table-row">
+            <div class="div-table-row">29</div>
+            <div class="div-table-row">30</div>
+            <div class="div-table-row">1</div>
+            <div class="div-table-row">2</div>
+            <div class="div-table-row">3</div>
+            <div class="div-table-row">4</div>
+            <div class="div-table-row">5</div>
+        </div>
+        <div class="div-table-row">
+            <div class="div-table-row">6</div>
+            <div class="div-table-row">7</div>
+            <div class="div-table-row">8</div>
+            <div class="div-table-row">9</div>
+            <div class="div-table-row">10</div>
+            <div class="div-table-row">11</div>
+            <div class="div-table-row">12</div>
+        </div>
+        <div class="div-table-row">
+            <div class="div-table-row">13</div>
+            <div class="div-table-row">14</div>
+            <div class="div-table-row">15</div>
+            <div class="div-table-row">16</div>
+            <div class="div-table-row">17</div>
+            <div class="div-table-row">18</div>
+            <div class="div-table-row">19</div>
+        </div>
+        <div class="div-table-row">
+            <div class="div-table-row">20</div>
+            <div class="div-table-row">21</div>
+            <div class="div-table-row">22</div>
+            <div class="div-table-row">23</div>
+            <div class="div-table-row">24</div>
+            <div class="div-table-row">25</div>
+            <div class="div-table-row">26</div>
+        </div>
+        <div class="div-table-row">
+            <div class="div-table-row">27</div>
+            <div class="div-table-row">28</div>
+            <div class="div-table-row">29</div>
+            <div class="div-table-row">30</div>
+            <div class="div-table-row">31</div>
+            <div class="div-table-row">1</div>
+            <div class="div-table-row">2</div>
+        </div>
+        <div class="div-table-row">
+            <div class="div-table-row">3</div>
+            <div class="div-table-row">4</div>
+            <div class="div-table-row">5</div>
+            <div class="div-table-row">6</div>
+            <div class="div-table-row">7</div>
+            <div class="div-table-row">8</div>
+            <div class="div-table-row">9</div>
+        </div>
+    </div>
+
+</form>
+<table>
+<tr>
+<td style="text-align:center;">
+    <div id="btnwrap">
+        <button class="clsActionButton" id="idAddButton" onclick="idAddButton_onclick();">Add</button>
+        <button class="clsActionButton" id="idEditButton" onclick="idEditButton();">Edit</button>
+        <button class="clsActionButton" id="idDeleteButton" onclick="idDeleteButton();">Delete</button>
+        <button class="clsActionButton" id="ManagedRowButton"onclick="idManageRowButton();">Add Row</button>
+    </div>
+
+</td>
+</tr>
+</table>
+
+
+<script>
+    function idAddButton_onclick() {
+      document.write (alert("Первое мая"));
+    }
+    function idEditButton(){
+      document.write(alert("День Победы"));
+    }
+    function idDeleteButton() {
+        document.write(alert("День жертв репрессий"));
+    }
+    function idManageRowButton() {
+        document.write(alert("День Киева"));
+    }
+</script>
+
+<script>
+    $('#mouseupcalendarmonday').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+    $('#mouseupcalendartuesday').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+    $('#mouseupcalendarwednesday').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+    $('#mouseupcalendarthursday').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+    $('#mouseupcalendarfriday').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+
+    $('#mousedowncalendarsaturday').mousedown(function(){
+        $(this).css('background','red');
+    });
+    $('#mousedowncalendarsunday').mousedown(function(){
+        $(this).css('background','red');
+    });
+
+
+</script>
+<script>
+    $('#mouseupcalendarmonda').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+    $('#mouseupcalendartuesda').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+    $('#mouseupcalendarwednesda').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+    $('#mouseupcalendarthursda').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+    $('#mouseupcalendarfrida').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+
+    $('#mousedowncalendarsaturda').mousedown(function(){
+        $(this).css('background','red');
+    });
+    $('#mousedowncalendarsunda').mousedown(function(){
+        $(this).css('background','red');
+    });
+
+
+</script>
+
+<button id="mouseupcalendarmonda">1</button>
+<button id="mouseupcalendartuesda">2</button>
+<button id="mouseupcalendarwednesda">3</button>
+<button id="mouseupcalendarthursda">4</button>
+<button id="mouseupcalendarfrida">5</button>
+<button id="mousedowncalendarsaturda">6</button>
+<button id="mousedowncalendarsunda">7</button>
+
+<table border="10" align="center">
+    <tr>
+        <th>Январь 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Последний день декабря')">31</button></td>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Выходной праздник')">1</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">2</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день')">3</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">4</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Выходной день')">5</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">6</button></td>
+
+    </tr>
+
+
+
+    <tr>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день Рождество')">7</button></td>
+        <td><button onclick="alert('Рабочий день')">8</button></td>
+        <td><button onclick="alert('Рабочий день')">9</button></td>
+        <td><button onclick="alert('Рабочий день')">10</button></td>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('День космонавтики')">12</button></td>
+        <td><button onclick="alert('Выходной день')">13</button></td>
+
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Выходной день')">14</button></td>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Рабочий день')">16</button></td>
+        <td><button onclick="alert('Рабочий день')">17</button></td>
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Выходной день')">20</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Выходной день')">21</button></td>
+        <td><button onclick="alert('Рабочий день')">22</button></td>
+        <td><button onclick="alert('Рабочий день')">23</button></td>
+        <td><button onclick="alert('Рабочий день')">24</button></td>
+        <td><button onclick="alert('Рабочий день')">25</button></td>
+        <td><button onclick="alert('Рабочий день')">26</button></td>
+        <td><button onclick="alert('Выходной день')">27</button></td>
+
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Пасха')">28</button></td>
+        <td><button onclick="alert('Выходной день')">29</button></td>
+        <td><button onclick="alert('Отработаем в мае')">30</button></td>
+        <td><button onclick="alert('Отработаем в мае')">31</button></td>
+
+
+
+
+
+    </tr>
+</table>
+
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Февраль 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('День Смеха')">28</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">29</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день')">30</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">31</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">1</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">2</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">3</button></td>
+    </tr>
+
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">4</button></td>
+        <td><button onclick="alert('Рабочий день')">5</button></td>
+        <td><button onclick="alert('Рабочий день')">6</button></td>
+        <td><button onclick="alert('Рабочий день')">7</button></td>
+        <td><button onclick="alert('День космонавтики')">8</button></td>
+        <td><button onclick="alert('Выходной день')">9</button></td>
+        <td><button onclick="alert('Выходной день')">10</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('Рабочий день')">12</button></td>
+        <td><button onclick="alert('Рабочий день')">13</button></td>
+        <td><button onclick="alert('Рабочий день')">14</button></td>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Выходной день')">16</button></td>
+        <td><button onclick="alert('Выходной день')">17</button></td>
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Рабочий день')">20</button></td>
+        <td><button onclick="alert('Рабочий день')">21</button></td>
+        <td><button onclick="alert('Рабочий день')">22</button></td>
+        <td><button onclick="alert('Выходной день')">23</button></td>
+        <td><button onclick="alert('Пасха')">24</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Выходной день')">25</button></td>
+        <td><button onclick="alert('Отработаем в мае')">26</button></td>
+        <td><button onclick="alert('Выходной день')">27</button></td>
+        <td><button onclick="alert('Отработаем в мае')">28</button></td>
+        <td><button onclick="alert('Уже март')">1</button></td>
+        <td><button onclick="alert('Уже март')">2</button></td>
+        <td><button onclick="alert('Уже март')">3</button></td>
+
+
+
+
+
+    </tr>
+</table>
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Март 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button onclick="alert('Ферваля')">25</button></td>
+        <td><button onclick="alert('Февраля')">26</button></td>
+        <td><button onclick="alert('Февраля')">27</button></td>
+        <td><button onclick="alert('Февраля')">28</button></td>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Рабочий день')">1</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Выходной день')">2</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Выходной день')">3</button></td>
+
+
+    </tr>
+
+
+
+    <tr>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">4</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">5</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Рабочий день')">6</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Рабочий день')">7</button></td>
+        <td><button onclick="alert('Рабочий день')">8</button></td>
+        <td><button onclick="alert('Выходной день')">9</button></td>
+        <td><button onclick="alert('Выходной день')">10</button></td>
+
+
+
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('Рабочий день')">12</button></td>
+        <td><button onclick="alert('Рабочий день')">13</button></td>
+        <td><button onclick="alert('Рабочий день')">14</button></td>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Выходной день')">16</button></td>
+        <td><button onclick="alert('Выходной день')">17</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Рабочий день')">20</button></td>
+        <td><button onclick="alert('Рабочий день')">21</button></td>
+        <td><button onclick="alert('Рабочий день')">22</button></td>
+        <td><button onclick="alert('Выходной день')">23</button></td>
+        <td><button onclick="alert('Выходной день')">24</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">25</button></td>
+        <td><button onclick="alert('Рабочий день')">26</button></td>
+        <td><button onclick="alert('Рабочий день')">27</button></td>
+        <td><button onclick="alert('Рабочий день')">28</button></td>
+        <td><button onclick="alert('Рабочий день')">29</button></td>
+        <td><button onclick="alert('Выходной день')">30</button></td>
+        <td><button onclick="alert('Выходной день')">31</button></td>
+
+
+
+
+
+    </tr>
+</table>
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Апрель 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('День Смеха')">1</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">2</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день')">3</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">4</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">5</button></td>
+
+    </tr>
+
+
+
+    <tr>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">6</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">7</button></td>
+        <td><button onclick="alert('Рабочий день')">8</button></td>
+        <td><button onclick="alert('Рабочий день')">9</button></td>
+        <td><button onclick="alert('Рабочий день')">10</button></td>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('День космонавтики')">12</button></td>
+
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">13</button></td>
+        <td><button onclick="alert('Рабочий день')">14</button></td>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Рабочий день')">16</button></td>
+        <td><button onclick="alert('Рабочий день')">17</button></td>
+        <td><button onclick="alert('Выходной день')">18</button></td>
+        <td><button onclick="alert('Выходной день')">19</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">20</button></td>
+        <td><button onclick="alert('Рабочий день')">21</button></td>
+        <td><button onclick="alert('Рабочий день')">22</button></td>
+        <td><button onclick="alert('Рабочий день')">23</button></td>
+        <td><button onclick="alert('Рабочий день')">24</button></td>
+        <td><button onclick="alert('Выходной день')">25</button></td>
+        <td><button onclick="alert('Выходной день')">26</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">27</button></td>
+        <td><button onclick="alert('Рабочий день')">28</button></td>
+        <td><button onclick="alert('Рабочий день')">29</button></td>
+        <td><button onclick="alert('Рабочий день')">30</button></td>
+        <td><button onclick="alert('Рабочий день')">31</button></td>
+
+
+
+
+    </tr>
+</table>
+
+
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Май 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('День Смеха')">1</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">2</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день')">3</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">4</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">5</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">6</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">7</button></td>
+    </tr>
+
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">8</button></td>
+        <td><button onclick="alert('Рабочий день')">9</button></td>
+        <td><button onclick="alert('Рабочий день')">10</button></td>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('День космонавтики')">12</button></td>
+        <td><button onclick="alert('Выходной день')">13</button></td>
+        <td><button onclick="alert('Выходной день')">14</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Рабочий день')">16</button></td>
+        <td><button onclick="alert('Рабочий день')">17</button></td>
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Выходной день')">20</button></td>
+        <td><button onclick="alert('Выходной день')">21</button></td>
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">22</button></td>
+        <td><button onclick="alert('Рабочий день')">23</button></td>
+        <td><button onclick="alert('Рабочий день')">24</button></td>
+        <td><button onclick="alert('Рабочий день')">25</button></td>
+        <td><button onclick="alert('Рабочий день')">26</button></td>
+        <td><button onclick="alert('Выходной день')">27</button></td>
+        <td><button onclick="alert('Пасха')">28</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Выходной день')">29</button></td>
+        <td><button onclick="alert('Отработаем в мае')">30</button></td>
+
+
+
+
+
+    </tr>
+</table>
+
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Июнь 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('День Смеха')">27</button></td>
+        <td><button id="mouseupcalendarmonday" onclick="alert('День Смеха')">28</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">29</button></td>
+        <td><button id="mouseupcalendarmonday" onclick="alert('День Смеха')">30</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">31</button></td>
+        <td><button id="mouseupcalendarmonday" onclick="alert('День Смеха')">1</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">2</button></td>
+
+    </tr>
+
+
+
+    <tr>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день')">3</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">4</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">5</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">6</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">7</button></td>
+        <td><button onclick="alert('Рабочий день')">8</button></td>
+        <td><button onclick="alert('Рабочий день')">9</button></td>
+
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">10</button></td>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('День космонавтики')">12</button></td>
+        <td><button onclick="alert('Выходной день')">13</button></td>
+        <td><button onclick="alert('Выходной день')">14</button></td>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Рабочий день')">16</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">17</button></td>
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Рабочий день')">20</button></td>
+        <td><button onclick="alert('Рабочий день')">21</button></td>
+        <td><button onclick="alert('Выходной день')">22</button></td>
+        <td><button onclick="alert('Выходной день')">23</button></td>
+
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">24</button></td>
+        <td><button onclick="alert('Рабочий день')">25</button></td>
+        <td><button onclick="alert('Рабочий день')">26</button></td>
+        <td><button onclick="alert('Рабочий день')">27</button></td>
+        <td><button onclick="alert('Рабочий день')">28</button></td>
+        <td><button onclick="alert('Выходной день')">29</button></td>
+        <td><button onclick="alert('Выходной день')">30</button></td>
+
+
+
+
+
+    </tr>
+</table>
+
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Июль 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Рабочий день')">1</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">2</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день')">3</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">4</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">5</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">6</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">7</button></td>
+    </tr>
+
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">8</button></td>
+        <td><button onclick="alert('Рабочий день')">9</button></td>
+        <td><button onclick="alert('Рабочий день')">10</button></td>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('Рабочий день')">12</button></td>
+        <td><button onclick="alert('Выходной день')">13</button></td>
+        <td><button onclick="alert('Выходной день')">14</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Рабочий день')">16</button></td>
+        <td><button onclick="alert('Рабочий день')">17</button></td>
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Выходной день')">20</button></td>
+        <td><button onclick="alert('Выходной день')">21</button></td>
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">22</button></td>
+        <td><button onclick="alert('Рабочий день')">23</button></td>
+        <td><button onclick="alert('Рабочий день')">24</button></td>
+        <td><button onclick="alert('Рабочий день')">25</button></td>
+        <td><button onclick="alert('Рабочий день')">26</button></td>
+        <td><button onclick="alert('Выходной день')">27</button></td>
+        <td><button onclick="alert('Выходной день')">28</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">29</button></td>
+        <td><button onclick="alert('Рабочий день')">30</button></td>
+        <td><button onclick="alert('Рабочий день')">31</button></td>
+
+
+
+        <td><button onclick=""></button></td>
+        <td><button></button></td>
+        <td><button></button></td>
+        <td><button></button></td>
+        <td><button></button></td>
+
+    </tr>
+</table>
+
+
+
+
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Август 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Рабочий день июля')">29</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день июля')">30</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день июля')">31</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день июля')">1</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день июля')">2</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">3</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">4</button></td>
+    </tr>
+
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">5</button></td>
+        <td><button onclick="alert('Рабочий день')">6</button></td>
+        <td><button onclick="alert('Рабочий день')">7</button></td>
+        <td><button onclick="alert('Рабочий день')">8</button></td>
+        <td><button onclick="alert('Рабочий день')">9</button></td>
+        <td><button onclick="alert('Выходной день')">10</button></td>
+        <td><button onclick="alert('Выходной день')">11</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">12</button></td>
+        <td><button onclick="alert('Рабочий день')">13</button></td>
+        <td><button onclick="alert('Рабочий день')">14</button></td>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Рабочий день')">16</button></td>
+        <td><button onclick="alert('Выходной день')">17</button></td>
+        <td><button onclick="alert('Выходной день')">18</button></td>
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Рабочий день')">20</button></td>
+        <td><button onclick="alert('Рабочий день')">21</button></td>
+        <td><button onclick="alert('Рабочий день')">22</button></td>
+        <td><button onclick="alert('Рабочий день')">23</button></td>
+        <td><button onclick="alert('Выходной день')">24</button></td>
+        <td><button onclick="alert('Выходной день')">25</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">26</button></td>
+        <td><button onclick="alert('Рабочий день')">27</button></td>
+        <td><button onclick="alert('Рабочий день')">28</button></td>
+        <td><button onclick="alert('Рабочий день')">29</button></td>
+        <td><button onclick="alert('Рабочий день')">30</button></td>
+        <td><button onclick="alert('Выходной день')">31</button></td>
+        <td><button onclick="alert('Пора на работу')">1</button></td>
+
+
+
+
+    </tr>
+</table>
+
+
+
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Сентябрь 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Рабочий день ')">26</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">27</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день')">28</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">29</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">30</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">31</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">1</button></td>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Рабочий день')">2</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">3</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день')">4</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">5</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">6</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">7</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">8</button></td>
+    </tr>
+
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">9</button></td>
+        <td><button onclick="alert('Рабочий день')">10</button></td>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('Рабочий день')">12</button></td>
+        <td><button onclick="alert('Рабочий день')">13</button></td>
+        <td><button onclick="alert('Выходной день')">14</button></td>
+        <td><button onclick="alert('Выходной день')">15</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">16</button></td>
+        <td><button onclick="alert('Рабочий день')">17</button></td>
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Рабочий день')">20</button></td>
+        <td><button onclick="alert('Выходной день')">21</button></td>
+        <td><button onclick="alert('Выходной день')">22</button></td>
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">23</button></td>
+        <td><button onclick="alert('Рабочий день')">24</button></td>
+        <td><button onclick="alert('Рабочий день')">25</button></td>
+        <td><button onclick="alert('Рабочий день')">26</button></td>
+        <td><button onclick="alert('Рабочий день')">27</button></td>
+        <td><button onclick="alert('Выходной день')">28</button></td>
+        <td><button onclick="alert('Выходной день')">29</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">30</button></td>
+
+
+
+
+
+    </tr>
+</table>
+
+
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Октябрь 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Сентября')">31</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Рабочий день')">1</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Рабочий день')">2</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">3</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">4</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной день')">5</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">6</button></td>
+    </tr>
+
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">7</button></td>
+        <td><button onclick="alert('Рабочий день')">8</button></td>
+        <td><button onclick="alert('Рабочий день')">9</button></td>
+        <td><button onclick="alert('Рабочий день')">10</button></td>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('Выходной день')">12</button></td>
+        <td><button onclick="alert('Выходной день')">13</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">14</button></td>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Рабочий день')">16</button></td>
+        <td><button onclick="alert('Рабочий день')">17</button></td>
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Выходной день')">19</button></td>
+        <td><button onclick="alert('Выходной день')">20</button></td>
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">21</button></td>
+        <td><button onclick="alert('Рабочий день')">22</button></td>
+        <td><button onclick="alert('Рабочий день')">23</button></td>
+        <td><button onclick="alert('Рабочий день')">24</button></td>
+        <td><button onclick="alert('Рабочий день')">25</button></td>
+        <td><button onclick="alert('Выходной день')">26</button></td>
+        <td><button onclick="alert('Выходной день')">27</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">28</button></td>
+        <td><button onclick="alert('Рабочий день')">29</button></td>
+        <td><button onclick="alert('Рабочий день')">30</button></td>
+        <td><button onclick="alert('Рабочий день')">31</button></td>
+
+
+
+
+
+    </tr>
+</table>
+
+
+
+<table border="10" align="center">
+    <tr>
+        <th>Ноябрь 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+
+
+    <tr>
+
+        <td><button id="mouseupcalendarmonday" onclick="alert('Октября')">28</button></td>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Октября')">29</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Октября')">30</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Октября')">31</button></td>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Октября')">1</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Выходной день')">2</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Выходной день')">3</button></td>
+    </tr>
+    <tr>
+
+        <td><button id="mouseupcalendarthursday" onclick="alert('Рабочий день')">4</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Рабочий день')">5</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Рабочий день')">6</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Рабочий день')">7</button></td>
+        <td><button onclick="alert('Рабочий день')">8</button></td>
+        <td><button onclick="alert('Выходной день')">9</button></td>
+        <td><button onclick="alert('Выходной день')">10</button></td>
+    </tr>
+
+
+
+    <tr>
+
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('Рабочий день')">12</button></td>
+        <td><button onclick="alert('Рабочий день')">13</button></td>
+        <td><button onclick="alert('Рабочий день')">14</button></td>
+        <td><button onclick="alert('Рабочий день')">15</button></td>
+        <td><button onclick="alert('Выходной день')">16</button></td>
+        <td><button onclick="alert('Выходной день')">17</button></td>
+
+
+    </tr>
+
+    <tr>
+
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Рабочий день')">20</button></td>
+        <td><button onclick="alert('Рабочий день')">21</button></td>
+        <td><button onclick="alert('Рабочий день')">22</button></td>
+        <td><button onclick="alert('Выходной день')">23</button></td>
+        <td><button onclick="alert('Выходной день')">24</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">25</button></td>
+        <td><button onclick="alert('Рабочий день')">26</button></td>
+        <td><button onclick="alert('Рабочий день')">27</button></td>
+        <td><button onclick="alert('Рабочий день')">28</button></td>
+        <td><button onclick="alert('Рабочий день')">29</button></td>
+        <td><button onclick="alert('Выходной день')">30</button></td>
+        <td><button onclick="alert('Декабрь')">1</button></td>
+
+
+    </tr>
+
+
+
+</table>
+
+<table border="10" align="center">
+    <tr>
+        <th>Декабрь 2019</th>
+    </tr>
+    <tr>
+        <th>Понедельник</th>
+        <th>Вторник</th>
+        <th>Среда</th>
+        <th>Четверг</th>
+        <th>Пятница</th>
+        <th>Суббота</th>
+        <th>Восскресенье</th>
+    </tr>
+    <tr>
+        <td><button id="mouseupcalendarmonday" onclick="alert('Ноября')">25</button></td>
+        <td><button id="mouseupcalendartuesday" onclick="alert('Ноября')">26</button></td>
+        <td><button id="mouseupcalendarwednesday" onclick="alert('Ноября')">27</button></td>
+        <td><button id="mouseupcalendarthursday" onclick="alert('Ноября')">28</button></td>
+        <td><button id="mouseupcalendarfriday"onclick="alert('Ноября')">29</button></td>
+        <td><button id="mousedowncalendarsaturday"onclick="alert('Выходной ноября')">30</button></td>
+        <td><button name="mousedowncalendarsunday"onclick="alert('Выходной день')">1</button></td>
+    </tr>
+
+
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">2</button></td>
+        <td><button onclick="alert('Рабочий день')">3</button></td>
+        <td><button onclick="alert('Рабочий день')">4</button></td>
+        <td><button onclick="alert('Рабочий день')">5</button></td>
+        <td><button onclick="alert('День космонавтики')">6</button></td>
+        <td><button onclick="alert('Выходной день')">7</button></td>
+        <td><button onclick="alert('Выходной день')">8</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">9</button></td>
+        <td><button onclick="alert('Рабочий день')">10</button></td>
+        <td><button onclick="alert('Рабочий день')">11</button></td>
+        <td><button onclick="alert('Рабочий день')">12</button></td>
+        <td><button onclick="alert('Рабочий день')">13</button></td>
+        <td><button onclick="alert('Выходной день')">14</button></td>
+        <td><button onclick="alert('Выходной день')">15</button></td>
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">16</button></td>
+        <td><button onclick="alert('Рабочий день')">17</button></td>
+        <td><button onclick="alert('Рабочий день')">18</button></td>
+        <td><button onclick="alert('Рабочий день')">19</button></td>
+        <td><button onclick="alert('Рабочий день')">20</button></td>
+        <td><button onclick="alert('Выходной день')">21</button></td>
+        <td><button onclick="alert('Выходной день')">22</button></td>
+
+
+    </tr>
+
+    <tr>
+        <td><button onclick="alert('Рабочий день')">23</button></td>
+        <td><button onclick="alert('Рабочий день')">24</button></td>
+        <td><button onclick="alert('Рабочий день')">25</button></td>
+        <td><button onclick="alert('Рабочий день')">26</button></td>
+        <td><button onclick="alert('Рабочий день')">27</button></td>
+        <td><button onclick="alert('Выходной день')">28</button></td>
+        <td><button onclick="alert('Выходной день')">29</button></td>
+
+
+    </tr>
+
+
+    <tr>
+        <td><button onclick="alert('Выходной день')">30</button></td>
+        <td><button onclick="alert('Отработаем в мае')">31</button></td>
+
+
+
+        <td><button onclick=""></button></td>
+        <td><button></button></td>
+        <td><button></button></td>
+        <td><button></button></td>
+        <td><button></button></td>
+
+    </tr>
+</table>
+<script>
+    $('#mup').mouseup(function () {
+        $(this).css('background', 'yellow');
+    });
+    $('#mdown').mousedown(function () {
+        $(this).css('background', 'yellow');
+    });
+
+</script>
+
+
+
+<script>
+    $.ajax(
+        {
+            url: 'veynik.ru/jquery-ajax/',
+            type: 'post',
+            dataType:'html',
+            data:{var1:'test',var2:'test2'},
+            success: function(data){
+                alert(data);
+            }
+        }
+    );
+</script>
+<button id="mup"> Рабочий день</button>
+<button id="mdown"> Выходной день</button>
+</body>
+</html>
